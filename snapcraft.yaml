@@ -1,0 +1,17 @@
+name: hello-world
+version: "1.0"
+summary: test
+description: Package a project with cmake
+grade: devel
+confinement: strict
+base: core22
+
+apps:
+  hello-world:
+    command: usr/local/bin/hello-world
+
+parts:
+  hello-world:
+    plugin: cmake
+    source: .
+    source-subdir: cmake-project
